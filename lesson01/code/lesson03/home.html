@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая разметка и стилизация</title>
+    <style>
+        /* Сброс стилей браузера до значений по умолчанию */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Стили для хедера */
+        .header {
+            background-color: red;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Стили для основного блока */
+        .main {
+            background-color: blue;
+            font-size: 18px;
+            color: white;
+            height: 300px;
+            padding: 20px;
+        }
+
+        /* Стили для футера */
+        .footer {
+            background-color: green;
+            font-size: 18px;
+            color: white;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Хедер с заголовком -->
+    <header class="header">
+        <h1>Мой сайт</h1>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <p>Здесь расположен основной контент страницы. Блок main стилизован с использованием семантической разметки.</p>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>Футер сайта</p>
+    </footer>
+
+</body>
+</html>
