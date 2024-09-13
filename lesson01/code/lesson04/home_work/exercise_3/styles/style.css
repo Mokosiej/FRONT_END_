@@ -1,0 +1,40 @@
+/* Сброс стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие стили для страницы */
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Цвет фона страницы */
+}
+
+/* Стили для блока */
+.block {
+    width: 400px;
+    height: 600px;
+    background-color: #5dade2; /* Голубой цвет блока */
+    position: relative;
+    border-radius: 10px;
+    border: 5px solid #f4d03f; /* Желтая рамка */
+}
+
+/* Стили для ленты с текстом */
+.ribbon {
+    background-color: #f4d03f; /* Желтый фон для ленты */
+    color: #000; /* Черный текст */
+    padding: 5px 20px;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    width: 150px;
+    text-align: center;
+    transform: rotate(45deg); /* Поворачиваем ленту */
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Легкая тень для ленты */
+}
