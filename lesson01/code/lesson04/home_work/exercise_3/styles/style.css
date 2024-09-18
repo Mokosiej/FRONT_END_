@@ -12,6 +12,7 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0; /* Цвет фона страницы */
+    overflow: auto;
 }
 
 /* Стили для блока */
@@ -20,9 +21,46 @@ html, body {
     height: 600px;
     background-color: #5dade2; /* Голубой цвет блока */
     position: relative;
-    border-radius: 10px;
-    border: 5px solid #f4d03f; /* Желтая рамка */
+   
 }
+
+/* Линии: горизонтальные и вертикальные */
+.horizontal-line, .vertical-line {
+    background-color: #f4d03f; /* Желтый цвет линий */
+    position: absolute;
+   
+}
+
+/* Горизонтальные линии */
+.horizontal-line {
+    height: 5px;
+    left: 20px;
+    right: 20px;
+}
+
+.top-line {
+    top: 20px; /* Отступ сверху */
+}
+
+.bottom-line {
+    bottom: 20px; /* Отступ снизу */
+}
+
+/* Вертикальные линии */
+.vertical-line {
+    width: 5px;
+    top: 20px;
+    bottom: 20px;
+}
+
+.left-line {
+    left: 20px;
+}
+
+.right-line {
+    right: 20px;
+}
+
 
 /* Стили для ленты с текстом */
 .ribbon {
@@ -37,4 +75,6 @@ html, body {
     transform: rotate(45deg); /* Поворачиваем ленту */
     font-weight: bold;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Легкая тень для ленты */
+    z-index: 2; /* Лента выше линий */
 }
+
