@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .card {
+    position: relative;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    width: 100%;
+    color: white;
+  }
+  
+  .movie-genre {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+  
+  .movie-year {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .movie-title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .movie-description {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
