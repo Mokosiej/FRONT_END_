@@ -4,23 +4,36 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
     overflow: hidden;
-    
+
 }
 
 .block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 600px;
-    background-color: #5dade2; 
+    background-color: #5dade2;
     position: relative;
     border-radius: 5px;
-   
+
+}
+
+.little-block {
+    background-color: #5dade2;
+    width: 350px;
+    height: 550px;
+    position: absolute;
+    padding: 10px 10px;
+    overflow: hidden
 }
 
 .horizontal-line {
@@ -32,11 +45,11 @@ html, body {
 }
 
 .top-line {
-    top: 20px; 
+    top: 20px;
 }
 
 .bottom-line {
-    bottom: 20px; 
+    bottom: 20px;
 }
 
 .vertical-line {
@@ -56,17 +69,18 @@ html, body {
 }
 
 .ribbon {
-    background-color: #f4d03f; /* Желтый фон для ленты */
-    color: #000; /* Черный текст */
-    padding: 0px 0px; /* Уменьшен отступ */
     position: absolute;
-    top: 75px;
-    right: 0; /* Измените на нужное значение */
-    width: 100px; /* Уменьшите ширину, если необходимо */
+    background-color: #f4d03f;
+    color: #000;
+    top: 150px;
+    bottom: 200px;
+    left: 80px;
+    width: 350px;
+    height: 30px;
     text-align: center;
     transform: rotate(45deg);
-    transform-origin: top right; /* Настройте точку поворота */
+    transform-origin: top right;
     font-weight: bold;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 20; /* Лента выше линий */
+
 }
