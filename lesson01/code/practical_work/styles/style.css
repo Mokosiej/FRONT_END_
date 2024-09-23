@@ -55,14 +55,14 @@ body {
 }
 
 .movie-info .year {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   margin-bottom: 5px;
 }
 
-.movie-info .genre {
+.movie-info .genre-drama {
   position: absolute;
-    top: -100px;
+    top: -175px;
     right: 0px;
     font-size: 12px;
     background-color: #f9c846;
@@ -74,18 +74,14 @@ body {
   
 
 .movie-info p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 0;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-style: italic;
   font-size: 1px;
-  line-height: 1.2;
-  margin-top: 5px;
+  line-height: 1;
+  margin-top: 1px;
   color: white;
+
  }
-
-
-.genre.drama {
-  background-color: #f9c846;
-}
 
 
 
