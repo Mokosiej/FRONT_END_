@@ -62,7 +62,7 @@ body {
 
 .movie-info .genre-drama {
   position: absolute;
-    top: -175px;
+    top: -180px;
     right: 0px;
     font-size: 12px;
     background-color: #f9c846;
@@ -76,7 +76,7 @@ body {
 .movie-info p {
   font-family: "Arial", "Helvetica", sans-serif;
   font-style: italic;
-  font-size: 1px;
+  font-size: 12px;
   line-height: 1;
   margin-top: 1px;
   color: white;
