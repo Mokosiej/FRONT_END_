@@ -1,22 +1,24 @@
 
 function transformObject(obj) {
-    let result = {};
-
+    const result = {}; 
     
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-           
-            result[key] = {
-                value: obj[key],
-                type: typeof obj[key]
-            };
-        }
-    }
+    Object.keys(obj).forEach(key => {
+        result[key] = {
+            value: obj[key],
+            type: typeof obj[key]
+        };
+    });
 
-    return result;
-}
+    return result; 
 
 // Примеры использования
-console.log(transformObject({ name: 'Alice', age: 25, isAdmin: true }));
+const exampleObject = {
+    name: 'Alice',
+    age: 25,
+    isAdmin: true,
+    scores: [100, 90, 85],
+    details: null
+};
 
-console.log(transformObject({ a: 1, b: 'hello', c: null, d: undefined }));
+console.log(transformObject(exampleObject));
+}

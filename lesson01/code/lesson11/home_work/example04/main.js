@@ -1,19 +1,29 @@
 
-function objectPropertiesToTypes(obj) {
-    let result = {};
-
-
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            
-            result[key] = typeof obj[key];
-        }
+function getObjectTypes(obj) {
+    
+    if (typeof obj !== 'object' || obj === null) {
+        return {}; 
     }
 
-    return result;
+    const keys = Object.keys(obj);
+    const result = {}; 
+
+    keys.map(key => {
+        result[key] = typeof obj[key]; 
+    });
+
+    return result; 
 }
 
 // Примеры использования
-console.log(objectPropertiesToTypes({ name: 'Alice', age: 25, isAdmin: true }));
+const exampleObject = {
+    name: 'Alice',
+    age: 25,
+    isAdmin: true,
+    scores: [100, 90, 85],
+    details: null,
+    address: { city: 'Wonderland' },
+};
 
-console.log(objectPropertiesToTypes({ a: 1, b: 'hello', c: null, d: undefined }));
+console.log(getObjectTypes(exampleObject));
+

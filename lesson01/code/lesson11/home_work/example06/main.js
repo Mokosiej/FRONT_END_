@@ -12,13 +12,9 @@ function areObjectsEqual(obj1, obj2) {
         return false;
     }
 
-    for (let key of keys1) {
-        if (obj1[key] !== obj2[key]) {
-            return false; 
-        }
-    }
+    const areEqual = keys1.every(key => obj1[key] === obj2[key]);
 
-    return true; 
+    return areEqual; 
 }
 
 // Примеры использования

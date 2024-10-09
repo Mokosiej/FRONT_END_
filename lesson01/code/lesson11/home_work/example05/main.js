@@ -1,33 +1,21 @@
 
 function calculateTotal(cart, prices) {
-    let total = 0;
-
     
-    for (let item in cart) {
-        if (cart.hasOwnProperty(item)) {
-            
-            let quantity = cart[item];
+    return Object.keys(cart).reduce((total, item) => {
         
-            let price = getPrice(item, prices);
+        const quantity = cart[item];
 
-            if (price !== null) {
-                total += price * quantity;
-            }
-        }
-    }
-
-    return total;
+        const price = getPrice(item, prices);
+        
+        return total + (price !== null ? price * quantity : 0);
+    }, 0);
 }
 
 function getPrice(item, prices) {
-    for (let category in prices) {
-        if (prices.hasOwnProperty(category)) {
-            if (prices[category][item] !== undefined) {
-                return prices[category][item]; 
-            }
-        }
-    }
-    return null; 
+    
+    return Object.values(prices).reduce((foundPrice, category) => {
+        return foundPrice !== null ? foundPrice : category[item] !== undefined ? category[item] : null;
+    }, null);
 }
 
 // Пример использования
