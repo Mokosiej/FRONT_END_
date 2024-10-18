@@ -19,7 +19,7 @@ let players = [
 // Задача 1: Добавляем каждому игроку свойство "goals"
 let playersWithGoals = players.map(player => {
     return {
-        ...player,
+        ...player, // оператор spread копирует все свойства объекта
         goals: Math.floor(Math.random() * 21) // случайное число от 0 до 20
     };
 });
@@ -33,8 +33,8 @@ let filteredPlayers = playersWithGoals.filter(player => player.height >= 180 && 
 console.log("Игроки с ростом >= 180 и весом < 80:");
 console.log(filteredPlayers);
 
-// Задача 3: Сортируем игроков по количеству забитых голов
-let sortedByGoals = playersWithGoals.slice().sort((a, b) => b.goals - a.goals);
+// Задача 3: Сортируем игроков по количеству забитых голов, используя оператор spread
+let sortedByGoals = [...playersWithGoals].sort((a, b) => b.goals - a.goals);
 
 console.log("Игроки, отсортированные по количеству забитых голов:");
 console.log(sortedByGoals);
