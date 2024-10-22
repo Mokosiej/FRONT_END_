@@ -25,8 +25,7 @@ function createLinkItems(links) {
 document.addEventListener('DOMContentLoaded', () => {
     const linkItems = createLinkItems(links); // Создаем массив элементов <li>
 
-    // Добавляем все элементы <li> в <ul>
-    linkItems.forEach(item => ul.appendChild(item));
+    ul.append(...linkItems); // Добавляем все элементы <li> в <ul> за один раз
 });
 
 
