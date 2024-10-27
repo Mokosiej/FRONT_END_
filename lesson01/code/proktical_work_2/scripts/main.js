@@ -8,6 +8,7 @@ const createTaskBtn = document.getElementById('createTaskBtn');
 const filterAllBtn = document.getElementById('filterAll');
 const filterCompletedBtn = document.getElementById('filterCompleted');
 const filterPendingBtn = document.getElementById('filterPending');
+const filterButtonsContainer = document.getElementById('filter-buttons-container');
 
 // Функция для отображения задач
 function renderTasks(filter = 'all') {
@@ -56,9 +57,18 @@ function filterTasks(filterType) {
 
 // События
 createTaskBtn.addEventListener('click', () => addTask(taskInput.value));
-filterAllBtn.addEventListener('click', () => filterTasks('all'));
-filterCompletedBtn.addEventListener('click', () => filterTasks('completed'));
-filterPendingBtn.addEventListener('click', () => filterTasks('pending'));
+
+filterButtonsContainer.addEventListener('click', (event) => {
+    const target = event.target;
+
+    if (target.matches('#filterAllBtn')) {
+        filterTasks('all');
+    } else if (target.matches('#filterCompletedBtn')) {
+        filterTasks('completed');
+    } else if (target.matches('#filterPendingBtn')) {
+        filterTasks('pending');
+    }
+});
 
 // Инициализация с рендерингом всех задач
 renderTasks();
